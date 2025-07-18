@@ -1,18 +1,19 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap');
 
-/* Reset & base */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #fdfdfd;
+  background-color: #fcfcfc;
   color: #1c1c1c;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* Navbar */
@@ -20,15 +21,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 20px 40px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  z-index: 100;
   position: relative;
-  z-index: 10;
 }
 
 .logo {
-  height: 70px;
+  height: 60px;
 }
 
 .navbar ul {
@@ -41,17 +42,18 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .navbar a:hover {
   color: #d96800;
 }
 
-/* Hero (Index) */
-.hero {
-  background: url('images/img_20181123_160115.jpg') no-repeat center center/cover;
-  height: 400px;
+/* Hero Section - Page À propos */
+.hero-apropos {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+              url('images/APROPOS.jpg') center/cover no-repeat;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,191 +62,76 @@ body {
   position: relative;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: transparent;
-  z-index: 1;
-}
-
-.hero h1,
-.hero p {
-  position: relative;
-  z-index: 2;
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.hero h1 {
+.hero-apropos h1 {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
   font-size: 50px;
-  font-weight: 700;
   margin-bottom: 10px;
+  z-index: 2;
 }
 
-.hero p {
+.hero-apropos p {
+  color: #fff;
   font-size: 20px;
   font-weight: 400;
-}
-
-/* Hero spécifique pour la page À propos */
-.hero-apropos {
-  background: url('images/APROPOS.jpg') no-repeat center center/cover;
-  height: 400px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero-apropos::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.hero-apropos h1,
-.hero-apropos p {
-  position: relative;
   z-index: 2;
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Main layout */
+/* Contenu principal */
 main {
   padding: 60px 20px;
   max-width: 1000px;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  animation: fadeInUp 0.8s ease;
 }
 
+/* Titres et textes */
 h2 {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 20px;
-  color: #00274d;
-  font-weight: 600;
+  color: #003366;
+  font-family: 'Playfair Display', serif;
 }
 
 p {
-  margin-bottom: 20px;
   font-size: 16px;
+  margin-bottom: 20px;
 }
 
 ul {
   padding-left: 20px;
   list-style-type: disc;
+  margin-bottom: 30px;
 }
 
 li {
   margin-bottom: 10px;
-  font-size: 15px;
 }
 
-/* Info Blocks */
-.info-blocks {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.info {
-  background-color: #f7f9fc;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-}
-
-.info h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #003366;
-}
-
-/* Why us */
-.why-us {
-  margin-top: 50px;
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 8px;
-}
-
-.why-us h2 {
-  margin-bottom: 20px;
-}
-
-.why-us ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.why-us li {
-  margin-bottom: 10px;
-  padding-left: 25px;
-  position: relative;
-}
-
-.why-us li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #1c6dd0;
-  font-size: 18px;
-}
-
-/* Testimonial */
-.testimonial {
-  background-color: #f2f2f2;
-  padding: 30px;
-  border-radius: 8px;
-  margin-top: 50px;
-}
-
-.testimonial blockquote {
-  font-style: italic;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.testimonial cite {
-  font-weight: bold;
-  color: #555;
-}
-
-/* Google Map */
-.map {
-  margin-top: 60px;
-}
-
-.map h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.map-container {
-  width: 100%;
-  height: 300px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+/* Animation simple */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Footer */
 footer {
-  background-color: #f0f0f0;
+  background-color: #f4f4f4;
   color: #555;
   text-align: center;
   padding: 30px 10px;
   font-size: 14px;
-  margin-top: 60px;
   border-top: 1px solid #ddd;
+  margin-top: 60px;
 }
 
 .footer-content p {
@@ -253,11 +140,11 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero h1, .hero-apropos h1 {
+  .hero-apropos h1 {
     font-size: 36px;
   }
 
-  .hero p, .hero-apropos p {
+  .hero-apropos p {
     font-size: 16px;
   }
 
@@ -267,6 +154,6 @@ footer {
 
   .navbar {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 }
