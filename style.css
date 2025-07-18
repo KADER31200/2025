@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f9fa;
+  background-color: #fdfdfd;
   color: #1c1c1c;
   line-height: 1.6;
 }
@@ -38,11 +38,11 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #ff6b00;
+  color: #d96800;
 }
 
 /* Hero section */
@@ -61,14 +61,14 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(255, 255, 255, 0.70); /* éclaircie */
   z-index: 1;
 }
 
 .hero h1, .hero p {
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: #00274d;
 }
 
 .hero h1 {
@@ -112,6 +112,27 @@ ul {
 li {
   margin-bottom: 10px;
   font-size: 15px;
+}
+
+/* New Info blocks */
+.info-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.info {
+  background-color: #f7f9fc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #003366;
 }
 
 /* Footer */
