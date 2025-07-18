@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cabinet Auguste</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
-    <div class="container">
-      <img src="images/logo_auguste.jpg" alt="Logo Cabinet Auguste" class="logo">
+    <div class="navbar">
+      <img src="logo_auguste.jpg" alt="Logo Cabinet Auguste" class="logo">
       <nav>
         <ul>
-          <li><a href="#cabinet">Le Cabinet</a></li>
-          <li><a href="#expertise">Expertise</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Le Cabinet</a></li>
+          <li><a href="#">Expertise</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>
+    <div class="hero">
+      <h1>Cabinet Auguste</h1>
+      <p>Avocats en droit des affaires à Paris</p>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="overlay">
-      <div class="hero-text">
-        <h1>Cabinet Auguste</h1>
-        <p>Avocats en droit des affaires à Paris</p>
-      </div>
-    </div>
-  </section>
-
   <main>
-    <section id="cabinet" class="content-section">
+    <section class="presentation">
       <h2>Le Cabinet</h2>
       <p>
-        Le Cabinet Auguste accompagne ses clients dans toutes leurs démarches juridiques, fiscales et stratégiques. 
+        Le Cabinet Auguste accompagne ses clients dans toutes leurs démarches juridiques, fiscales et stratégiques.
         Installés à Paris, nous intervenons auprès des PME, startups et particuliers. 
         Notre approche est fondée sur la rigueur, la confidentialité et l’excellence du conseil.
       </p>
     </section>
 
-    <section id="expertise" class="content-section">
+    <section class="expertise">
       <h2>Domaines d'expertise</h2>
       <ul>
         <li>Droit des sociétés</li>
@@ -53,11 +46,13 @@
     </section>
   </main>
 
-  <footer id="contact">
-    <p><strong>Adresse :</strong> 54 boulevard de Bourgogne, 75007 Paris</p>
-    <p><strong>Tél :</strong> 01 42 00 00 00</p>
-    <p><strong>Email :</strong> contact@cabinetauguste.fr</p>
-    <p>&copy; 2025 Cabinet Auguste - Tous droits réservés</p>
+  <footer>
+    <div class="footer-content">
+      <p>📍 54 Boulevard de Bourgogne, 75007 Paris</p>
+      <p>📞 01 23 45 67 89 — ✉️ contact@cabinetauguste.fr</p>
+      <p>&copy; 2025 Cabinet Auguste — Tous droits réservés</p>
+    </div>
   </footer>
+
 </body>
 </html>
