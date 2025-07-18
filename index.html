@@ -2,60 +2,71 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cabinet Auguste</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
+
+  <!-- Header fixe avec logo -->
+  <header class="header">
+    <div class="container">
       <div class="logo">
-        <img src="images/logo_auguste.jpg" alt="Logo Cabinet Auguste">
+        <img src="images/logo_auguste.jpg" alt="Cabinet Auguste">
       </div>
-      <ul class="nav-links">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#cabinet">Le Cabinet</a></li>
-        <li><a href="#expertise">Expertise</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+      <nav class="nav">
+        <ul>
+          <li><a href="#cabinet">Le Cabinet</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- Hero image + overlay -->
   <section class="hero">
-    <img src="images/img_20181123_160115.jpg" alt="Palais de justice">
-    <div class="hero-text">
+    <img src="images/img_20181123_160115.jpg" alt="Bâtiment de justice">
+    <div class="hero-overlay">
       <h1>Cabinet Auguste</h1>
-      <p>Avocat en droit des affaires à Paris</p>
+      <p>Avocats en droit des affaires à Paris</p>
     </div>
   </section>
 
-  <section class="presentation" id="cabinet">
-    <div class="content-box">
-      <h2>Notre Cabinet</h2>
+  <!-- Présentation -->
+  <section class="section" id="cabinet">
+    <div class="container">
+      <h2>Le Cabinet</h2>
       <p>
-        Le Cabinet Auguste vous accompagne dans vos démarches juridiques, fiscales et administratives.
-        Nous mettons notre expertise au service des particuliers et des professionnels.
+        Le Cabinet Auguste accompagne ses clients dans toutes leurs démarches juridiques,
+        fiscales et stratégiques. Installés à Paris, nous intervenons auprès des PME, startups et particuliers.
+        Notre approche est fondée sur la rigueur, la confidentialité et l’excellence du conseil.
       </p>
     </div>
   </section>
 
-  <section class="expertise" id="expertise">
-    <div class="content-box">
-      <h2>Domaines d'expertise</h2>
-      <ul>
+  <!-- Expertise -->
+  <section class="section light" id="expertise">
+    <div class="container">
+      <h2>Domaines d’expertise</h2>
+      <ul class="expertise-list">
         <li>Droit des sociétés</li>
-        <li>Droit fiscal</li>
+        <li>Fiscalité des entreprises</li>
         <li>Contrats commerciaux</li>
-        <li>Conseils en conformité (RGPD)</li>
+        <li>Protection des données (RGPD)</li>
       </ul>
     </div>
   </section>
 
-  <footer id="contact">
-    <p><strong>📍 Adresse :</strong> 54 boulevard de Bourgogne, 75007 Paris</p>
-    <p><strong>📞 Téléphone :</strong> 01 42 00 11 22</p>
-    <p><strong>📧 Email :</strong> <a href="mailto:contact@cabinetauguste.fr">contact@cabinetauguste.fr</a></p>
-    <p>© 2025 Cabinet Auguste - Tous droits réservés</p>
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <p>Cabinet Auguste – 54 boulevard de Bourgogne, 75007 Paris</p>
+      <p>Tél : 01 42 00 11 22 – <a href="mailto:contact@cabinetauguste.fr">contact@cabinetauguste.fr</a></p>
+      <p class="copyright">© 2025 Cabinet Auguste – Tous droits réservés</p>
+    </div>
   </footer>
+
 </body>
 </html>
