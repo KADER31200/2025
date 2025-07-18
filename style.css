@@ -61,11 +61,12 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.70); /* éclaircie */
+  background-color: rgba(255, 255, 255, 0.65); /* Éclaircissement pour lisibilité */
   z-index: 1;
 }
 
-.hero h1, .hero p {
+.hero h1,
+.hero p {
   position: relative;
   z-index: 2;
   color: #00274d;
@@ -82,7 +83,7 @@ body {
   font-weight: 400;
 }
 
-/* Sections */
+/* Main layout */
 main {
   padding: 60px 20px;
   max-width: 1000px;
@@ -114,7 +115,7 @@ li {
   font-size: 15px;
 }
 
-/* New Info blocks */
+/* Info Blocks */
 .info-blocks {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -133,6 +134,56 @@ li {
   font-size: 20px;
   margin-bottom: 10px;
   color: #003366;
+}
+
+/* Why us */
+.why-us {
+  margin-top: 50px;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.why-us h2 {
+  margin-bottom: 20px;
+}
+
+.why-us ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.why-us li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.why-us li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1c6dd0;
+  font-size: 18px;
+}
+
+/* Testimonial */
+.testimonial {
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial cite {
+  font-weight: bold;
+  color: #555;
 }
 
 /* Footer */
