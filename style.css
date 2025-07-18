@@ -1,171 +1,126 @@
-/* Import de police */
-body {
+/* Général */
+* {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #f7f7f7;
-  color: #1a1a1a;
-  font-size: 16px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #1c1c1c;
   line-height: 1.6;
 }
 
-/* Containers généraux */
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 10;
 }
 
-/* Header */
-.header {
-  background: #ffffff;
-  padding: 20px 0;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 999;
+.logo {
+  height: 70px;
 }
 
-.logo img {
-  height: 50px;
-}
-
-.nav {
-  float: right;
-  margin-top: 15px;
-}
-
-.nav ul {
+.navbar ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   gap: 30px;
 }
 
-.nav a {
+.navbar a {
   text-decoration: none;
-  color: #1a1a1a;
+  color: #333;
   font-weight: 500;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.3s ease;
 }
 
-.nav a:hover {
-  color: #004080;
+.navbar a:hover {
+  color: #d96800;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
-  position: relative;
+  background: url('img_20181123_160115.jpg') no-repeat center center/cover;
   height: 400px;
-  overflow: hidden;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  color: #00274d;
+  position: relative;
 }
 
-.hero-overlay h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  color: #002244;
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
-.hero-overlay p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+.hero h1, .hero p {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
   color: #333;
 }
 
 /* Sections */
-.section {
-  padding: 60px 0;
-  background-color: #ffffff;
+main {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.section.light {
-  background-color: #f1f3f5;
-}
-
-.section h2 {
-  font-size: 1.8rem;
+h2 {
+  font-size: 28px;
   margin-bottom: 20px;
-  color: #002244;
+  color: #00274d;
 }
 
-.section p {
-  font-size: 1.05rem;
-  max-width: 800px;
+p {
+  margin-bottom: 20px;
 }
 
-/* Liste expertises */
-.expertise-list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 20px;
+ul {
+  padding-left: 20px;
+  list-style-type: disc;
 }
 
-.expertise-list li {
-  padding: 8px 0;
-  border-bottom: 1px solid #ddd;
-  font-size: 1rem;
+li {
+  margin-bottom: 10px;
 }
 
 /* Footer */
-.footer {
-  background-color: #ffffff;
-  padding: 40px 20px;
+footer {
+  background-color: #fafafa;
+  color: #555;
   text-align: center;
-  font-size: 0.95rem;
-  border-top: 1px solid #e0e0e0;
-  color: #444;
+  padding: 30px 10px;
+  font-size: 14px;
+  margin-top: 60px;
+  border-top: 1px solid #ddd;
 }
 
-.footer a {
-  color: #004080;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .nav {
-    float: none;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .hero-overlay {
-    padding: 25px;
-    width: 90%;
-  }
-
-  .hero-overlay h1 {
-    font-size: 2rem;
-  }
-
-  .hero-overlay p {
-    font-size: 1rem;
-  }
+.footer-content p {
+  margin-bottom: 8px;
 }
