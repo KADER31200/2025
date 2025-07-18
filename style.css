@@ -1,206 +1,26 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-/* Reset & base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fdfdfd;
-  color: #1c1c1c;
-  line-height: 1.6;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 20px 40px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  position: relative;
-  z-index: 10;
-}
-
-.logo {
-  height: 70px;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #d96800;
-}
-
-/* Hero section */
-.hero {
-  background: url('images/img_20181123_160115.jpg') no-repeat center center/cover;
+/* Google Maps */
+.map-container {
+  width: 100%;
   height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: transparent;
-  z-index: 1;
-}
-
-.hero h1,
-.hero p {
-  position: relative;
-  z-index: 2;
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* ombre pour lisibilité */
-}
-
-.hero h1 {
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-/* Main layout */
-main {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-}
-
-h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #00274d;
-  font-weight: 600;
-}
-
-p {
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-ul {
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-li {
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-/* Info Blocks */
-.info-blocks {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
   margin-top: 40px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.info {
-  background-color: #f7f9fc;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+.map-container:hover {
+  transform: scale(1.01);
 }
 
-.info h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #003366;
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(30%) brightness(0.95);
+  transition: filter 0.4s ease;
 }
 
-/* Why us */
-.why-us {
-  margin-top: 50px;
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 8px;
-}
-
-.why-us h2 {
-  margin-bottom: 20px;
-}
-
-.why-us ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.why-us li {
-  margin-bottom: 10px;
-  padding-left: 25px;
-  position: relative;
-}
-
-.why-us li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #1c6dd0;
-  font-size: 18px;
-}
-
-/* Testimonial */
-.testimonial {
-  background-color: #f2f2f2;
-  padding: 30px;
-  border-radius: 8px;
-  margin-top: 50px;
-}
-
-.testimonial blockquote {
-  font-style: italic;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.testimonial cite {
-  font-weight: bold;
-  color: #555;
-}
-
-/* Footer */
-footer {
-  background-color: #f0f0f0;
-  color: #555;
-  text-align: center;
-  padding: 30px 10px;
-  font-size: 14px;
-  margin-top: 60px;
-  border-top: 1px solid #ddd;
-}
-
-.footer-content p {
-  margin-bottom: 8px;
+.map-container:hover iframe {
+  filter: grayscale(0%) brightness(1);
 }
