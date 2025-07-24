@@ -362,3 +362,30 @@ footer {
   margin-bottom: 10px;
   font-size: 16px;
 }
+/* Domaines d'expertise stylisé */
+.content-section ul {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
+.content-section li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #1c1c1c;
+  line-height: 1.8;
+}
+
+/* Icône personnalisée à la place des puces */
+.content-section li::before {
+  content: "⚖️";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 16px;
+  color: #00274d;
+}
