@@ -6,6 +6,53 @@
   <title>À propos - Cabinet Auguste</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .section-block {
+      background-color: #f9f9f9;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+    }
+    .section-block h2 {
+      color: #002d5a;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    .section-block p {
+      font-size: 16px;
+      color: #333;
+    }
+    .gallery {
+      margin-top: 60px;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+    .gallery h2 {
+      text-align: center;
+      font-size: 26px;
+      color: #002d5a;
+      margin-bottom: 30px;
+    }
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gallery-container img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .gallery-container img:hover {
+      transform: scale(1.03);
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -20,19 +67,19 @@
   <!-- Hero Section -->
   <section class="hero-apropos">
     <h1>À propos du Cabinet</h1>
-    <p>Un cabinet engagé aux côtés des entreprises et dirigeants</p>
+    <p>Un cabinet d’experts au service des entreprises et dirigeants</p>
   </section>
 
   <!-- Contenu principal -->
   <main>
-    <section>
+    <section class="section-block">
       <h2>Notre Histoire</h2>
       <p>
         Fondé à Paris en 2010, le Cabinet Auguste est né de la volonté d’accompagner les entreprises et leurs dirigeants dans un environnement juridique complexe et en constante évolution.
       </p>
     </section>
 
-    <section>
+    <section class="section-block">
       <h2>Notre Philosophie</h2>
       <p>
         Nous croyons en une approche sur-mesure, confidentielle et rigoureuse. Chaque dossier est traité avec exigence et humanité, pour vous offrir un accompagnement stratégique à forte valeur ajoutée.
@@ -43,9 +90,9 @@
     <section class="gallery">
       <h2>Le Cabinet en images</h2>
       <div class="gallery-container">
-        <img src="images/imagecabinet.jpg" alt="Vue du cabinet">
-        <img src="images/salle-de-réunion.jpg" alt="Salle de réunion">
-        <img src="images/imagecabinet2.webp" alt="Espace accueil du cabinet">
+        <img src="images/imagecabinet.jpg" alt="Bureau du cabinet">
+        <img src="images/imagecabinet2.webp" alt="Salle de réunion">
+        <img src="images/salle-de-reunion.jpg" alt="Espace d'accueil">
       </div>
     </section>
   </main>
