@@ -32,9 +32,21 @@
     }
     .gallery h2 {
       text-align: center;
-      font-size: 26px;
+      font-size: 32px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
       color: #002d5a;
       margin-bottom: 30px;
+      position: relative;
+    }
+    .gallery h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #d96800;
+      margin: 10px auto 0;
+      border-radius: 2px;
     }
     .gallery-container {
       display: flex;
@@ -66,8 +78,8 @@
 
   <!-- Hero Section -->
   <section class="hero-apropos">
-    <h1>À propos du Cabinet</h1>
-    <p>Un cabinet d’experts au service des entreprises et dirigeants</p>
+    <h1 style="font-family: 'Playfair Display', serif; font-size: 42px; color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); text-align: center;">À propos du Cabinet</h1>
+    <p style="color: #f0f0f0; font-size: 18px; text-align: center;">Un cabinet d’experts au service des entreprises et dirigeants</p>
   </section>
 
   <!-- Contenu principal -->
@@ -92,7 +104,7 @@
       <div class="gallery-container">
         <img src="images/imagecabinet.jpg" alt="Bureau du cabinet">
         <img src="images/imagecabinet2.webp" alt="Salle de réunion">
-        <img src="images/salle-de-reunion.jpg" alt="Espace d'accueil">
+        <img src="images/salle-de-réunion.jpg" alt="Espace d'accueil">
       </div>
     </section>
   </main>
