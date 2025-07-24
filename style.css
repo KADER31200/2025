@@ -380,12 +380,12 @@ footer {
   line-height: 1.8;
 }
 
-/* Icône personnalisée à la place des puces */
 .content-section li::before {
-  content: "⚖️";
+  content: "✅";
   position: absolute;
   left: 0;
   top: 1px;
   font-size: 16px;
-  color: #00274d;
+  color: #1c6dd0;
 }
+
