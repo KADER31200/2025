@@ -1,159 +1,62 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap');
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - Cabinet Auguste</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/logo_auguste.jpg" alt="Logo Cabinet Auguste" class="logo">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
 
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <!-- Hero Section -->
+  <section class="hero-apropos">
+    <h1>À propos du Cabinet</h1>
+    <p>Un cabinet engagé aux côtés des entreprises et dirigeants</p>
+  </section>
 
-/* Base */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fcfcfc;
-  color: #1c1c1c;
-  line-height: 1.7;
-}
+  <!-- Contenu principal -->
+  <main>
+    <section>
+      <h2>Notre Histoire</h2>
+      <p>
+        Fondé à Paris en 2010, le Cabinet Auguste est né de la volonté d’accompagner les entreprises et leurs dirigeants dans un environnement juridique complexe et en constante évolution.
+      </p>
+    </section>
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  padding: 20px 40px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  z-index: 100;
-  position: relative;
-}
+    <section>
+      <h2>Notre Philosophie</h2>
+      <p>
+        Nous croyons en une approche sur-mesure, confidentielle et rigoureuse. Chaque dossier est traité avec exigence et humanité, pour vous offrir un accompagnement stratégique à forte valeur ajoutée.
+      </p>
+    </section>
 
-.logo {
-  height: 60px;
-}
+    <!-- Galerie du Cabinet -->
+    <section class="gallery">
+      <h2>Le Cabinet en images</h2>
+      <div class="gallery-container">
+        <img src="images/imagecabinet.jpg" alt="Vue du cabinet">
+        <img src="images/salle-de-réunion.jpg" alt="Salle de réunion">
+        <img src="images/imagecabinet2.webp" alt="Espace accueil du cabinet">
+      </div>
+    </section>
+  </main>
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.navbar a:hover {
-  color: #d96800;
-}
-
-/* Hero Section - Page À propos */
-.hero-apropos {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
-              url('images/APROPOS.jpg') center/cover no-repeat;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-
-.hero-apropos h1 {
-  font-family: 'Playfair Display', serif;
-  color: #fff;
-  font-size: 50px;
-  margin-bottom: 10px;
-  z-index: 2;
-}
-
-.hero-apropos p {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 400;
-  z-index: 2;
-}
-
-/* Contenu principal */
-main {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-  animation: fadeInUp 0.8s ease;
-}
-
-/* Titres et textes */
-h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: #003366;
-  font-family: 'Playfair Display', serif;
-}
-
-p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-ul {
-  padding-left: 20px;
-  list-style-type: disc;
-  margin-bottom: 30px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-/* Animation simple */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Footer */
-footer {
-  background-color: #f4f4f4;
-  color: #555;
-  text-align: center;
-  padding: 30px 10px;
-  font-size: 14px;
-  border-top: 1px solid #ddd;
-  margin-top: 60px;
-}
-
-.footer-content p {
-  margin-bottom: 8px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-apropos h1 {
-    font-size: 36px;
-  }
-
-  .hero-apropos p {
-    font-size: 16px;
-  }
-
-  main {
-    padding: 30px 15px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <p>&copy; 2025 Cabinet Auguste - Tous droits réservés</p>
+      <p>54 Boulevard de Bourgogne, 75007 Paris</p>
+      <p>contact@cabinetauguste.fr | +33 1 42 00 00 00</p>
+    </div>
+  </footer>
+</body>
+</html>
